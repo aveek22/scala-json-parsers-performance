@@ -36,6 +36,12 @@ Clone the project and start `sbt`.
 
     jmh:run -i 2 -wi 2 -f1 -t1
 
+Explanation:
+
+- `i 2`: Specifies the number of measurement iterations to be 2. This means the benchmark will be measured 2 times.
+- `wi 2`: Specifies the number of warm-up iterations to be 2. This means the benchmark will be run 2 times before the actual measurement to allow the JVM to optimize the code.
+- `f1`: Specifies the number of forked JVMs to be 1. This means the benchmark will be run in a single forked JVM.
+- `t1`: Specifies the number of threads to be 1. This means the benchmark will be run with a single thread.
 
 ## Deserialization (String -> case class)
 
